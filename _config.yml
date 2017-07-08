@@ -1,2 +1,4 @@
 name: Ignas Anikevičius
 markdown: kramdown
+
+theme: jekyll-theme-slate
