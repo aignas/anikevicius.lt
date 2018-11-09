@@ -197,6 +197,10 @@ There is a final bit of making the diagnostics easier, which could be done by:
 
 But that can be left as a practice for the reader.
 
+And we have a result:
+
+![final result](git-prompt-1.png)
+
 *to be continued*
 
 [ion]: https://github.com/redox/ion
