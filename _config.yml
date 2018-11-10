@@ -64,10 +64,10 @@ sass:
 
 # Custom
 domain: anikevicius.lt
-url: http://anikevicius.lt
-title: anikevicius.lt
-description: Portfolio website of Ignas Anikevičius
-copyright: 2017&mdash;2017
+url: https://anikevicius.lt
+title: aignas
+description: Yet another blog on programming
+copyright: 2017&mdash;2018
 name: aignas
 author: aignas
 twitter:
