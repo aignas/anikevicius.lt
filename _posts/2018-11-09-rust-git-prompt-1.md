@@ -145,7 +145,7 @@ use clap::Arg;
 fn main() {
     let matches = App::new("git_prompt")
         .version("v0.1")
-        .author("Ignas A. <anikevicius@gmail.com>")
+        .author("aignas@github")
         .about("Prints your git prompt info fast!")
         .arg(Arg::with_name("PATH")
              .help("Optional path to use for getting git info")
@@ -197,9 +197,9 @@ There is a final bit of making the diagnostics easier, which could be done by:
 
 But that can be left as a practice for the reader.
 
-And we have a result:
+That is how we got the following prompt:
 
-![final result](git-prompt-1.png)
+![final result]({{ site.url }}/assets/img/git_prompt/1.png)
 
 *to be continued*
 
