@@ -207,7 +207,7 @@ That is how we got the following prompt:
 [ion]: https://github.com/redox/ion
 [zsh]: https://ohmyz.sh/
 [od-prompt]: https://github.com/olivierverdier/zsh-git-prompt "github repository"
-[od-prompt-img]: https://github.com/olivierverdier/zsh-git-prompt/raw/master/screenshot.png "An example of Olivier`s prompt"
+[od-prompt-img]: {{ site.url }}/assets/img/git_prompt/od-prompt-img.png
 [nvim]: https://github.com/neovim/neovim
 [git2-crate]: https://docs.rs/crate/git2/0.7.5
 [clap-crate]: https://docs.rs/crate/clap/2.32.0
