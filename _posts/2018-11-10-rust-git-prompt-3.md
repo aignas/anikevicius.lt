@@ -125,7 +125,10 @@ expose this as a configuration parameters for the user.
 
 However, fine-tuning of the defaults may require some tinkering and that is why
 I decided to write some helper routines, which would print me some examples.
-For that I implemented a naïve random data generator using the [`rng::choose`][rng-create].
+For that I implemented a naïve random data generator using
+[rng::choose][rng-create].  The final test can be seen below:
+
+![final test][final-test]
 
 This is really useful to test happy paths and see how things look like with
 various data.
