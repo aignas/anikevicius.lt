@@ -87,9 +87,10 @@ in my vimrc:
 augroup rust_settings
     autocmd!
     autocmd FileType rust let g:rustfmt_autosave = 1
-    autocmd FileType rust nnoremap <leader>cr :!cargo run<cr>
+    autocmd FileType rust nnoremap <leader>cr :!cargo run --<end>
     autocmd FileType rust nnoremap <leader>ct :!cargo test<cr>
     autocmd FileType rust nnoremap <leader>ct :!cargo bench<cr>
+    autocmd FileType rust nnoremap <leader>cu :!cargo update<cr>
 augroup END
 ```
 
