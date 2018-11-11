@@ -1,0 +1,7 @@
+{% extends "default.html" %}
+{% block content %}
+{% for page in section.pages %}
+<a class="page-link" href="{{ page.permalink }}">{{ page.title }}</a>
+{{ page.summary | safe }}
+{% endfor %}
+{% endblock content %}
