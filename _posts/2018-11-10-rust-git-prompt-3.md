@@ -91,7 +91,7 @@ Thus the result should look as:
 Let's use the [repository state][docs-git2-repo-state] and implement the last
 part of the list by creating a function which maps the state to a string:
 ```rust
-\\ ...
+// ...
     let state = match repo.state() {
         git2::RepositoryState::Merge => Some("merge"),
         git2::RepositoryState::Rebase
@@ -107,7 +107,7 @@ part of the list by creating a function which maps the state to a string:
     if let Some(s) = state {
         return Ok(format!(" {}", s));
     }
-\\ ...
+// ...
 ```
 
 As you see, we want to return the state of the branch, if we are doing
