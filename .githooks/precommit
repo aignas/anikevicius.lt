@@ -1,3 +1,4 @@
 #!/bin/sh
 
+echo "Building with gutenberg"
 exec gutenberg build
