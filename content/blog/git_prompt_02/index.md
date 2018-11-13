@@ -1,5 +1,5 @@
 +++
-title = "Writing yet another git prompt. Part 2"
+title = "Writing yet another git prompt - diagnostics"
 date = 2018-11-10
 draft = true
 
@@ -7,23 +7,21 @@ draft = true
 tags = ["rust", "git", "prompt"]
 +++
 
-# Writing yet another git prompt 2
-
 This post is from a series of posts about writing a small application in Rust to display information about a particular git repository.
 - [Part 1: Writing MVP][part-1]
-
-## Diagnostics
 
 Yesterday I finished with a reasonably good starting point and I thought that
 I would not talk about diagnostics, but after finding out how good `rust`
 tool-chain is at this, I wanted to share some thoughts.
+
+<!-- more -->
 
 Yes, some simple CLIs like ours probably don't need an option to do heavy
 diagnostics on it.  However, when we do run into problems and don't have a good
 way to introspect your programs, I am going to waste more time than I want.
 That is why it makes sense to start doing it as early as possible.
 
-## Macros to the rescue
+# Macros to the rescue
 
 Using the tips from [rust cookbook][rust-book-logging] one can get started really quickly.
 Add the following to the dependency section in your `Cargo.toml`:

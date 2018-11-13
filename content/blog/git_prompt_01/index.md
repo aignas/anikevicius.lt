@@ -1,5 +1,5 @@
 +++
-title = "Writing yet another git prompt. Part 1"
+title = "Writing yet another git prompt - MVP"
 date = 2018-11-09
 draft = true
 
@@ -7,13 +7,13 @@ draft = true
 tags = ["rust", "git", "prompt"]
 +++
 
-# Writing yet another git prompt
-
 As an attempt to learn Rust and type-driven development using it I am going
 to show you how to write a small Rust CLI, which gives you status about the
 current repository.  I wanted a small CLI to update my prompt for [ion][ion]
 and [zsh][zsh] and I wanted it to be as fast as possible with the possibility
 to extend in case I want to display more information.
+
+<!-- more -->
 
 For `zsh` there already is a nice solution made by Olivier Verdier [on github][od-prompt].
 
@@ -21,7 +21,7 @@ For `zsh` there already is a nice solution made by Olivier Verdier [on github][o
 
 I think that it has a nice way of printing information and that is why I decided to use it as a starting point.
 
-## Motivation
+# Motivation
 
 Why do I want to have such prompt written in Rust?  There are at least a few benefits from technical standpoint:
 - It runs everywhere
@@ -29,7 +29,7 @@ Why do I want to have such prompt written in Rust?  There are at least a few ben
 - I can easily parallelize certain bits, which means that it is faster.
 - I can have tests and type safety.
 
-## High level problem description
+# High level problem description
 
 So this is a small program, which can be moddeled as below CLI interface if we wanted to pass all of the arguments to it as mixture of positional and optional arguments:
 ```
@@ -49,7 +49,7 @@ Where the display switches may be:
 And the options, which may have values associated with them
 - color-scheme specification
 
-## MVP
+# MVP
 
 In order for it to become useful straight away it needs to be able to:
 
@@ -68,7 +68,7 @@ The API we want to implement is:
 PROGRAM [path]
 ```
 
-### Tools
+# Tools
 
 I am going to develop in my dotfiles repository, because I want the plugns to
 be easy to install for me. Since everything will be contained in a single
@@ -107,7 +107,7 @@ This will help me to check the status often and iterate quickly.
 
 Now `cargo run` should print `Hello, world!`, which means that we can continue.
 
-### Code
+# Code
 
 We are going to use the excellent [git2][git2-crate] to interact with the
 repository and it has a really nice API.

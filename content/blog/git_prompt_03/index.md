@@ -1,5 +1,5 @@
 +++
-title = "Writing yet another git prompt. Part 3"
+title = "Writing yet another git prompt - testing"
 date = 2018-11-11
 draft = true
 
@@ -7,14 +7,18 @@ draft = true
 tags = ["rust", "git", "prompt"]
 +++
 
-# Writing yet another git prompt 3
-
 This post is from a series of posts about writing a small application in Rust to display information about a particular git repository.
 
 - [Part 1: Writing MVP][part-1]
 - [Part 2: Logging][part-2]
 
-## Git local status
+I have finished at the MVP stage (part 1) of the prompt after adding the logging (part 2) so in this post I summarize the rest of features:
+- `git` branch status
+- `git` local status
+
+<!-- more -->
+
+# Git local status
 
 At the moment we have a simple program that can print a branch name into the
 `stdout`.  It does provide some information, but it is nowhere near the desired
@@ -61,7 +65,7 @@ The idea is to encapsulate all of the logic of constructing the status in one
 function and main is only responsible for the interaction with the outside
 world.
 
-### Some notes on the data
+# Some notes on the data
 
 It is important to note, that when we receive the status of the files in the
 git repository, each item in the list may have multiple flags associated to it.
@@ -82,7 +86,7 @@ The implementation is not one of the most succinct, so I'll spare you from
 having all of it inline, especially since I have outline the main things how it
 is going to be structured.
 
-## Branch status
+# Branch status
 
 I still need to implement some way to have branch status and after some thinking I decided to go with the following approach:
 - As a user I want to see differences between the remote branch in `origin`.
@@ -124,7 +128,7 @@ something *special* on not do anything else.  The only odd thing about this is
 that `rustfmt` is formatting the code in an interesting way for the
 `cherry-pick` case, but I can live with this.
 
-## Colours
+# Colours
 
 Up until now everything was white on black on my terminal.  This means that it
 may require more time to quickly notice the state of the git repo.  That is why
