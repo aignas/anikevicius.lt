@@ -8,4 +8,3 @@ build:
 serve:
 	@echo "-- serving with Gutenberg --"
 	gutenberg serve
-
