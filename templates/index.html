@@ -14,7 +14,7 @@
 <div class="m-t-3">
   <div class="list-group">
     {% set section = get_section(path="blog/_index.md") %}
-    {% for post in section.pages  %}
+    {% for post in section.pages | sort(attribute="date") %}
     <a href="{{ post.permalink }}" class="list-group-item">
       <h4 class="list-group-item-heading h6">{{ post.title }}
         <small class="text-muted"> &ndash;
