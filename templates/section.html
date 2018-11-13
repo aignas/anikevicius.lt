@@ -6,23 +6,23 @@
   <p class="text-muted user-select-none">{{ section.description }}</p>
 </header>
 <div class="m-t-3 text-justify">
-{% if section.pages %}
- {% for post in section.pages | sort(attribute="date") %}
-   <div class="card m-b-2">
-     <div class="card-block">
-       <h3 class="card-title">{{ page.title }}</h3>
-       <div class="card-text">{{ page.summary | safe }}</div>
-     </div>
-     <div class="card-footer clearfix">
-       <small class="pull-xs-left text-muted">Posted <time datetime="{{ page.date }}">{{ page.date }}</time> in&nbsp;{{ section.title }}</small>
-       <a class="pull-xs-left label" href="{{ section.permalink }}" style="background-color:#3498db">{# category:General #}</a>
-       {# TODO: page.reading_time #}
-       <small><a class="pull-xs-right" href="{{ page.permalink }}">Read more</a></small>
-     </div>
-   </div>
- {% endfor %}
-{% else %}
-<p class="text-xs-center">Nothing here yet...</p>
-{% endif %}
+  {% if section.pages %}
+  {% for post in section.pages | sort(attribute="date") | reverse %}
+  <div class="card m-b-2">
+    <div class="card-block">
+      <h3 class="card-title">{{ page.title }}</h3>
+      <div class="card-text">{{ page.summary | safe }}</div>
+    </div>
+    <div class="card-footer clearfix">
+      <small class="pull-xs-left text-muted">Posted <time datetime="{{ page.date }}">{{ page.date }}</time> in&nbsp;{{ section.title }}</small>
+      <a class="pull-xs-left label" href="{{ section.permalink }}" style="background-color:#3498db">{# category:General #}</a>
+      {# TODO: page.reading_time #}
+      <small><a class="pull-xs-right" href="{{ page.permalink }}">Read more</a></small>
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p class="text-xs-center">Nothing here yet...</p>
+  {% endif %}
 </div>
 {% endblock content %}
