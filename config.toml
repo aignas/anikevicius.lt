@@ -1,9 +1,9 @@
+title = "aignas blog"
 base_url = "https://anikevicius.lt"
-
+description = "Personal experiences whilst travelling through the geekdom of tech"
 compile_sass = true
 highlight_code = true
-highlight_theme = "gruvbox-dark"
-build_search_index = true
+highlight_theme = "monokai"
 check_external_links = false
 generate_rss = true
 

@@ -1,7 +1,6 @@
 +++
 title = "Writing yet another git prompt - MVP"
 date = 2018-11-09
-draft = true
 
 [taxonomies]
 tags = ["rust", "git", "prompt"]
