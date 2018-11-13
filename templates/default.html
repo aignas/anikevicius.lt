@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/favicon-152.png">
     <link rel="stylesheet" href="/assets/minddust.min.css">
-    <script src="/assets/blazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
   </head>
   <body>
     <header>
@@ -26,6 +26,6 @@
     <section>
       <article>{% block content %}{% endblock content %}</article>
     </section>
-    <footer class="text-xs-center text-uppercase text-muted"><small>&copy; {{ config.extra.domain | safe }} and  minddust.com, {{ config.extra.copyright | safe }} &ndash; <a href="/imprint/">imprint</a></small></footer>
+    <footer class="text-xs-center text-uppercase text-muted"><small>&copy; {{ config.extra.domain | safe }} and  minddust.com, {{ config.extra.copyright | safe }}</small></footer>
   </body>
 </html>
