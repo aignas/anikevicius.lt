@@ -1,5 +1,5 @@
 +++
-title = "Writing yet another git prompt - testing"
+title = "git_prompt: Generating test data for UI tuning"
 date = 2018-11-11
 
 [taxonomies]
@@ -8,8 +8,8 @@ tags = ["rust", "git", "prompt"]
 
 This post is from a series of posts about writing a small application in Rust to display information about a particular git repository.
 
-- [Part 1: Writing MVP][part-1]
-- [Part 2: Logging][part-2]
+- [Part 1: Writing MVP][part-01]
+- [Part 2: Logging][part-02]
 
 I have finished at the MVP stage (part 1) of the prompt after adding the logging (part 2) so in this post I summarize the rest of features:
 - `git` branch status
@@ -145,8 +145,14 @@ For that I implemented a naïve random data generator using
 This is really useful to test happy paths and see how things look like with
 various data.
 
-[part-1]: https://anikevicius.lt/post/rust-git-prompt-1/
-[part-2]: https://anikevicius.lt/post/rust-git-prompt-2/
+Continue to:
+- [Part 4: type driven rewrite][part-04]
+
+[part-01]: ./blog/git_prompt_01/index.md
+[part-02]: ./blog/git_prompt_02/index.md
+[part-03]: ./blog/git_prompt_03/index.md
+[part-04]: ./blog/git_prompt_04/index.md
+
 [docs-git2-repo-state]: https://docs.rs/git2/0.7.5/git2/enum.RepositoryState.html
 [colored-crate]: https://crates.io/crates/colored
 [rng-crate]: https://docs.rs/rand/0.5.3/rand/trait.Rng.html#method.choose

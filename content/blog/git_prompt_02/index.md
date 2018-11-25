@@ -1,5 +1,5 @@
 +++
-title = "Writing yet another git prompt - diagnostics"
+title = "git_prompt: diagnostics and logging"
 date = 2018-11-10
 
 [taxonomies]
@@ -7,7 +7,7 @@ tags = ["rust", "git", "prompt"]
 +++
 
 This post is from a series of posts about writing a small application in Rust to display information about a particular git repository.
-- [Part 1: Writing MVP][part-1]
+- [Part 1: Writing MVP][part-01]
 
 Yesterday I finished with a reasonably good starting point and I thought that
 I would not talk about diagnostics, but after finding out how good `rust`
@@ -54,7 +54,11 @@ Things I really like:
   concern and as a result it may pollute your object factory functions.
 
 Continue to:
-- [Part 3: generating test data](./blog/git_prompt_03/index.md)
+- [Part 3: generating test data][part-03]
+- [Part 4: type driven rewrite][part-04]
 
-[part-1]: https://anikevicius.lt/post/rust-git-prompt-1/
+[part-01]: ./blog/git_prompt_01/index.md
+[part-02]: ./blog/git_prompt_02/index.md
+[part-03]: ./blog/git_prompt_03/index.md
+[part-04]: ./blog/git_prompt_04/index.md
 [rust-book-logging]: https://rust-lang-nursery.github.io/rust-cookbook/development_tools/debugging/log.html

@@ -1,5 +1,5 @@
 +++
-title = "Writing yet another git prompt - MVP"
+title = "git_prompt: Writing an MWP"
 date = 2018-11-09
 
 [taxonomies]
@@ -211,8 +211,14 @@ That is how we got the following prompt:
 ![final result][mvp-img]
 
 Continue to:
-- [Part 2: logging and diagnostics](./blog/git_prompt_02/index.md)
-- [Part 3: generating test data](./blog/git_prompt_03/index.md)
+- [Part 2: logging and diagnostics][part-02]
+- [Part 3: generating test data][part-03]
+- [Part 4: type driven rewrite][part-04]
+
+[part-01]: ./blog/git_prompt_01/index.md
+[part-02]: ./blog/git_prompt_02/index.md
+[part-03]: ./blog/git_prompt_03/index.md
+[part-04]: ./blog/git_prompt_04/index.md
 
 [ion]: https://github.com/redox/ion
 [zsh]: https://ohmyz.sh/
