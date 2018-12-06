@@ -1,5 +1,5 @@
 +++
-title = "Makefile: adding prerequisites"
+title = "Makefile: adding prerequisites to external targets"
 date = 2018-12-06
 
 [taxonomies]
@@ -12,7 +12,7 @@ target is built, `make` builds the prerequisite you are interested in.
 
 <!-- more -->
 
-The following `Makefile` make file illustrates what we have at hand:
+The following `Makefile` illustrates what we have at hand:
 ```makefile
 api: dep
 	@echo "-- building API --"
@@ -50,3 +50,6 @@ $ make api
 -- building dep --
 -- building API --
 ```
+
+This technique can be really useful to add prerequisites for targets without
+modifying them.
