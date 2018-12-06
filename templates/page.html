@@ -1,7 +1,8 @@
 {% extends "default.html" %}
 
 {% block content %}
-<div class="m-t-3 text-justify">
+<div><h1>{{ page.title | safe }}</h1></div>
+<div class="m-t-3">
   {{ page.content | safe }}
 </div>
 {% endblock content %}

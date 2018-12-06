@@ -8,9 +8,12 @@ tags = ["make", "rules", "recipe", "prerequisites"]
 
 Consider that you have a situation where you have a build system using `make`
 heavily.  And you want to hook into one of the targets such that before the
-target is built, `make` builds the prerequisite you are interested in.  The
-following `Makefile` make file illustrates what we have at hand:
-```
+target is built, `make` builds the prerequisite you are interested in.
+
+<!-- more -->
+
+The following `Makefile` make file illustrates what we have at hand:
+```makefile
 api: dep
 	@echo "-- building API --"
 
@@ -34,7 +37,7 @@ $ make api
 Now what we want is to build docs before `dep` is built.
 It turns out that this can be achieved simply by adding the following to your `Makefile`:
 
-```
+```makefile
 dep: docs
 docs:
 	@echo "-- building docs --"

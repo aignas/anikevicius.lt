@@ -6,11 +6,17 @@ date = 2018-11-25
 tags = ["rust", "git", "prompt"]
 +++
 
-This post is from a series of posts about writing a small application in Rust to display information about a particular git repository.
+This post is from a series of posts about writing a small application in Rust
+to display information about a particular git repository.
 
 - [Part 1: Writing MVP][part-01]
 - [Part 2: Logging][part-02]
 - [Part 3: Testing the UI and color schemes][part-03]
+
+In this part I try to explore the problem by relying on the Rust's compiler and
+the sum types.
+
+<!-- more -->
 
 # Rewriting, the type-driven way.
 

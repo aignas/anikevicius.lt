@@ -7,7 +7,7 @@
 </header>
 <div class="m-t-3 text-justify">
   {% if section.pages %}
-  {% for post in section.pages | sort(attribute="date") | reverse %}
+  {% for page in section.pages | sort(attribute="date") | reverse %}
   <div class="card m-b-2">
     <div class="card-block">
       <h3 class="card-title">{{ page.title }}</h3>

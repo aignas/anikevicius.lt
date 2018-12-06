@@ -3,8 +3,8 @@ init:
 
 build:
 	@echo "-- building with Gutenberg --"
-	gutenberg build
+	zola build
 
 serve:
 	@echo "-- serving with Gutenberg --"
-	gutenberg serve
+	zola serve
