@@ -1,0 +1,31 @@
+{% extends "default.html" %}
+
+{% block content %}
+<header class="text-xs-center">
+  <h1 class="text-uppercase">{{ section.title }}</h1>
+  <p class="text-muted user-select-none">{{ section.description }}</p>
+</header>
+<div class="m-t-3 text-justify">
+  {% if section.pages %}
+  <div class="m-t-3 text-justify">
+  <div class="list-group text-xs-left">
+  {% for page in section.pages | sort(attribute="title") | reverse %}
+  <a href="{{ page.permalink }}" class="list-group-item p-t-0 p-l-0 p-b-0">
+    <div class="media m-b-0">
+      <div class="media-left">
+        <img class="media-object" src="{{ page.extra.img }}" alt="{{ page.extra.img_alt }}">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ page.title }}</h4>
+        <p class="hidden-xs-down m-b-0">{{ page.description }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+  </div>
+  </div>
+  {% else %}
+  <p class="text-xs-center">Nothing here yet...</p>
+  {% endif %}
+</div>
+{% endblock content %}
