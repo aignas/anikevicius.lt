@@ -6,7 +6,7 @@ init:
 
 serve: zola
 	@echo "-- serving with Zola --"
-	./zola serve ${ARGS}
+	./zola --config config.dev.toml serve
 
 build: zola
 	@echo "-- building with Zola --"

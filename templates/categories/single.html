@@ -13,13 +13,13 @@
       <div class="card-text">{{ page.summary | safe }}</div>
     </div>
     <div class="card-footer clearfix">
-      <small class="pull-xs-left text-muted">Posted <time datetime="{{ page.date }}">{{ page.date }}</time> in&nbsp;</small>
+      <small class="pull-xs-left text-muted">Posted <time datetime="{{ page.date }}">{{ page.date }}</time> in
       {% if page.taxonomies is containing("categories") %}
       {% for c in page.taxonomies["categories"] %}
       {% set url = get_taxonomy_url(kind="categories", name=c) %}
-      <a class="pull-xs-left label" href="{{ url }}" style="background-color:#3498db">{{ c }}</a>
+      &nbsp;<a class="label" href="{{ url }}" style="background-color:#3498db">{{ c }}</a>
       {% endfor %}
-      {% endif %}
+      {% endif %}</small>
       <small><a class="pull-xs-right" href="{{ page.permalink }}">Read more: {{ page.reading_time }} min</a></small>
     </div>
   </div>

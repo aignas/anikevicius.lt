@@ -221,7 +221,7 @@ Continue to:
 [part-03]: ./blog/git_prompt_03/index.md
 [part-04]: ./blog/git_prompt_04/index.md
 
-[ion]: https://github.com/redox/ion
+[ion]: https://github.com/redox-os/ion
 [zsh]: https://ohmyz.sh/
 [od-prompt]: https://github.com/olivierverdier/zsh-git-prompt "github repository"
 [od-prompt-img]: od-prompt-img.png

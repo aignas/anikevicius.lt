@@ -155,7 +155,7 @@ Continue to:
 [part-04]: ./blog/git_prompt_04/index.md
 
 [docs-git2-repo-state]: https://docs.rs/git2/0.7.5/git2/enum.RepositoryState.html
-[colored-crate]: https://crates.io/crates/colored
+[colored-crate]: https://github.com/mackwic/colored
 [rng-crate]: https://docs.rs/rand/0.5.3/rand/trait.Rng.html#method.choose
 
 [od-prompt-img]: od-prompt-img.png
