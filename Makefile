@@ -19,9 +19,6 @@ zola:
 		@echo "-- downloading zola binary --" \
 		$(shell curl -sL $(ZOLA_URL) | tar zxv))
 
-zola-web:
-zola-local:
-
 clean:
 	@echo "-- cleanup --"
-	rm zola
+	rm -rf zola public
