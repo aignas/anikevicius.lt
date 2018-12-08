@@ -7,6 +7,7 @@ template = "project.html"
 
 [taxonomies]
 tags = ["rust", "git", "prompt"]
+categories = ["project", "CLI"]
 
 [extra]
 img = "https://asciinema.org/a/RlvQkQ57HZ6Pcw7pNlvuLAfjd.svg"

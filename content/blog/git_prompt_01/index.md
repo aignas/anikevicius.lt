@@ -4,6 +4,7 @@ date = 2018-11-09
 
 [taxonomies]
 tags = ["rust", "git", "prompt"]
+tags = ["Programming"]
 +++
 
 As an attempt to learn Rust and type-driven development using it I am going

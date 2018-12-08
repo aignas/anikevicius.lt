@@ -6,6 +6,10 @@ highlight_code = true
 highlight_theme = "monokai"
 check_external_links = false
 generate_rss = true
+taxonomies = [
+  {name = "tags"},
+  {name = "categories"},
+]
 
 [extra]
 # Put all your custom variables here

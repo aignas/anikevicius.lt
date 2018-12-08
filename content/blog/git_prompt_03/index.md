@@ -4,6 +4,7 @@ date = 2018-11-11
 
 [taxonomies]
 tags = ["rust", "git", "prompt"]
+categories = ["Programming"]
 +++
 
 This post is from a series of posts about writing a small application in Rust to display information about a particular git repository.

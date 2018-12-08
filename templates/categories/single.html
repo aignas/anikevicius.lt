@@ -2,24 +2,24 @@
 
 {% block content %}
 <header class="text-xs-center">
-  <h1 class="text-uppercase">{{ section.title }}</h1>
-  <p class="text-muted user-select-none">{{ section.description }}</p>
+  <h1 class="text-uppercase">{{ term.name }}</h1>
 </header>
 <div class="m-t-3 text-justify">
-  {% if section.pages %}
-  {% for page in section.pages | filter(attribute="draft", value=false) | sort(attribute="date") | reverse %}
+  {% if term.pages %}
+  {% for page in term.pages | filter(attribute="draft", value=false) | sort(attribute="date") | reverse %}
   <div class="card m-b-2">
     <div class="card-block">
       <h3 class="card-title">{{ page.title }}</h3>
       <div class="card-text">{{ page.summary | safe }}</div>
     </div>
     <div class="card-footer clearfix">
-      <small class="pull-xs-left text-muted">Posted <time datetime="{{ page.date }}">{{ page.date }}</time> in
+      <small class="pull-xs-left text-muted">Posted <time datetime="{{ page.date }}">{{ page.date }}</time> in&nbsp;</small>
       {% if page.taxonomies is containing("categories") %}
       {% for c in page.taxonomies["categories"] %}
       {% set url = get_taxonomy_url(kind="categories", name=c) %}
-      &nbsp;<a class="label" href="{{ url }}" style="background-color:#3498db">{{ c }}</a> {% endfor %}
-      {% endif %}</small>
+      <a class="pull-xs-left label" href="{{ url }}" style="background-color:#3498db">{{ c }}</a>
+      {% endfor %}
+      {% endif %}
       <small><a class="pull-xs-right" href="{{ page.permalink }}">Read more: {{ page.reading_time }} min</a></small>
     </div>
   </div>

@@ -4,6 +4,7 @@ date = 2018-12-06
 
 [taxonomies]
 tags = ["make", "rules", "recipe", "prerequisites"]
+categories = ["Programming", "Tips"]
 +++
 
 Consider that you have a situation where you have a build system using `make`

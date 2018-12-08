@@ -5,4 +5,19 @@
 <div class="m-t-3">
   {{ page.content | safe }}
 </div>
+
+<p class="m-t-3 text-muted font-italic">
+  <small>Posted in
+      {% if page.taxonomies is containing("categories") %}
+      {% for c in page.taxonomies["categories"] %}
+      {% set url = get_taxonomy_url(kind="categories", name=c) %}
+      &nbsp;<a class="label" href="{{ url }}" style="background-color:#3498db">{{ c }}</a> {% endfor %}
+      {% endif %}
+      {% if page.taxonomies is containing("tags") %}
+      with <span class="icon-price-tags"></span>:
+      {% for c in page.taxonomies["tags"] %}
+      &nbsp;<a href="{{ get_taxonomy_url(kind="tags", name=c) }}">{{ c }}</a> {% endfor %}
+      {% endif %}
+  </small>
+</p>
 {% endblock content %}
