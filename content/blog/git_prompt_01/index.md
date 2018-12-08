@@ -4,7 +4,7 @@ date = 2018-11-09
 
 [taxonomies]
 tags = ["rust", "git", "prompt"]
-tags = ["Programming"]
+categories = ["Programming"]
 +++
 
 As an attempt to learn Rust and type-driven development using it I am going
@@ -209,7 +209,7 @@ But that can be left as a practice for the reader.
 
 That is how we got the following prompt:
 
-![final result][mvp-img]
+![final result][mwp-img]
 
 Continue to:
 - [Part 2: logging and diagnostics][part-02]
@@ -225,7 +225,7 @@ Continue to:
 [zsh]: https://ohmyz.sh/
 [od-prompt]: https://github.com/olivierverdier/zsh-git-prompt "github repository"
 [od-prompt-img]: od-prompt-img.png
-[mvp-img]: mvp.png
+[mwp-img]: mwp.png
 [nvim]: https://github.com/neovim/neovim
 [git2-crate]: https://docs.rs/crate/git2/0.7.5
 [clap-crate]: https://docs.rs/crate/clap/2.32.0
