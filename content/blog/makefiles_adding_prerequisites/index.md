@@ -3,7 +3,7 @@ title = "Makefile: adding prerequisites to external targets"
 date = 2018-12-06
 
 [taxonomies]
-tags = ["make", "rules", "recipe", "prerequisites"]
+tags = ["make", "rules", "target"]
 categories = ["Programming", "Tips"]
 +++
 
@@ -36,7 +36,8 @@ $ make api
 ```
 
 Now what we want is to build docs before `dep` is built.
-It turns out that this can be achieved simply by adding the following to your `Makefile`:
+It turns out that this can be achieved simply by adding the following to your
+`Makefile`:
 
 ```makefile
 dep: docs
@@ -53,4 +54,7 @@ $ make api
 ```
 
 This technique can be really useful to add prerequisites for targets without
-modifying them.
+modifying them.  Read more about multiple rules for make targets in the
+[GNU make documentation][multiple-rules].
+
+[multiple-rules]: https://www.gnu.org/software/make/manual/html_node/Multiple-Rules.html
