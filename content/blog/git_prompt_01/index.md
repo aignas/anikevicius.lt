@@ -1,5 +1,5 @@
 +++
-title = "git_prompt: Writing an MWP"
+title = "git-prompt-rs: Writing an MWP"
 date = 2018-11-09
 
 [taxonomies]
@@ -85,9 +85,9 @@ Cargo.lock
 
 And then we can create a new application using the excellent `rust` tool-chain:
 ```
-$ mkdir git_prompt
-$ cargo init --bin --edition 2018 git_prompt
-$ cd git_prompt
+$ mkdir git-prompt-rs
+$ cargo init --bin --edition 2018 git-prompt-rs
+$ cd git-prompt-rs
 ```
 
 Since I am coding with [neovim][nvim], I am going to define the following maps
@@ -134,7 +134,7 @@ fn main() {
 ```
 If we run `cargo run` it we get:
 ```sh
-Current path is: "/home/ia/src/github/dotfiles/ion/plugins/git_prompt"
+Current path is: "/home/ia/src/github/dotfiles/ion/plugins/git-prompt-rs"
 ```
 
 If we run `cargo run -- ${HOME}` it we get:
@@ -153,7 +153,7 @@ use clap::Arg;
 
 
 fn main() {
-    let matches = App::new("git_prompt")
+    let matches = App::new("git-prompt")
         .version("v0.1")
         .author("aignas@github")
         .about("Prints your git prompt info fast!")

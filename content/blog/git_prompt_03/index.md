@@ -1,5 +1,5 @@
 +++
-title = "git_prompt: Generating test data for UI tuning"
+title = "git-prompt-rs: Generating test data for UI tuning"
 date = 2018-11-11
 
 [taxonomies]

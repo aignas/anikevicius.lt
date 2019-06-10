@@ -1,5 +1,5 @@
 +++
-title = "git_prompt"
+title = "git-prompt-rs"
 description = "A CLI to provide git repository information for your prompt."
 date = 2018-12-10
 
@@ -11,7 +11,7 @@ categories = ["project", "CLI"]
 
 [extra]
 img = "https://asciinema.org/a/RlvQkQ57HZ6Pcw7pNlvuLAfjd.svg"
-img_alt = "git_prompt screencast"
+img_alt = "git-prompt-rs screencast"
 +++
 
 As a way to learn [Rust](https://www.rust-lang.org/) I decided to write a small

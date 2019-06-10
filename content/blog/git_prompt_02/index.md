@@ -1,5 +1,5 @@
 +++
-title = "git_prompt: diagnostics and logging"
+title = "git-prompt-rs: diagnostics and logging"
 date = 2018-11-10
 
 [taxonomies]

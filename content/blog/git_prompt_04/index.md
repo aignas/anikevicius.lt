@@ -1,5 +1,5 @@
 +++
-title = "git_prompt: Type driven development in Rust"
+title = "git-prompt-rs: Type driven development in Rust"
 date = 2018-11-25
 
 [taxonomies]
@@ -89,4 +89,4 @@ rely on mocks to test the system is really good.
 [part-02]: ./blog/git_prompt_02/index.md
 [part-03]: ./blog/git_prompt_03/index.md
 [part-04]: ./blog/git_prompt_04/index.md
-[link]: https://github.com/aignas/git_prompt
+[link]: https://github.com/aignas/git-prompt-rs
