@@ -1,23 +1,13 @@
-ZOLA_VERSION ?= 0.5.1
-ZOLA_URL = https://github.com/getzola/zola/releases/download/v$(ZOLA_VERSION)/zola-v$(ZOLA_VERSION)-x86_64-unknown-linux-gnu.tar.gz
-
-init: zola
+init:
 	git config core.hooksPath .githooks
 
-serve: zola
+serve:
 	@echo "-- serving with Zola --"
-	./zola --config config.dev.toml serve
+	zola --config config.dev.toml serve
 
-build: zola
+build:
 	@echo "-- building with Zola --"
-	./zola build ${ARGS}
-
-zola:
-	$(if $(shell which zola), \
-		@echo "-- symlinking system zola binary --" \
-		$(shell ln -s "$(which zola)" zola), \
-		@echo "-- downloading zola binary --" \
-		$(shell curl -sL $(ZOLA_URL) | tar zxv))
+	zola build ${ARGS}
 
 clean:
 	@echo "-- cleanup --"
