@@ -216,10 +216,10 @@ Continue to:
 - [Part 3: generating test data][part-03]
 - [Part 4: type driven rewrite][part-04]
 
-[part-01]: ./blog/git_prompt_01/index.md
-[part-02]: ./blog/git_prompt_02/index.md
-[part-03]: ./blog/git_prompt_03/index.md
-[part-04]: ./blog/git_prompt_04/index.md
+[part-01]: @/blog/git_prompt_01/index.md
+[part-02]: @/blog/git_prompt_02/index.md
+[part-03]: @/blog/git_prompt_03/index.md
+[part-04]: @/blog/git_prompt_04/index.md
 
 [ion]: https://github.com/redox-os/ion
 [zsh]: https://ohmyz.sh/
