@@ -36,6 +36,6 @@ This list could definitely be added to, but it is a good start.
 
 # Drinks
 
-- [Duokle angelams (Angel's Share)](https://goo.gl/maps/yHiKjA4FPFK2.):  If good single malt whiskey and cocktails is your thing:
+- [Duokle angelams (Angel's Share)](https://goo.gl/maps/yHiKjA4FPFK2):  If good single malt whiskey and cocktails is your thing:
 - [Rum Room](https://goo.gl/maps/ypGr3nwXqVN2):  If rum is something you would rather fancy. Also gives food IIRC:
 - [Alaus biblioteka (Beer Library)](https://goo.gl/maps/qY1jMAmCvrp):  If you want to try really good local (and non-local beer).
