@@ -14,7 +14,7 @@ taxonomies = [
 [extra]
 # Put all your custom variables here
 domain = "localhost"
-copyright = "2017&mdash;2018"
+copyright = "2017&mdash;2020"
 twitter = "anikevicius"
 github = "aignas"
 name = "aignas"

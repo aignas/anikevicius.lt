@@ -85,8 +85,8 @@ part becomes either the UI, or the queries of the stateful systems and not as
 much the data transformations.  This means that creating a seam early on to not
 rely on mocks to test the system is really good.
 
-[part-01]: ./blog/git_prompt_01/index.md
-[part-02]: ./blog/git_prompt_02/index.md
-[part-03]: ./blog/git_prompt_03/index.md
-[part-04]: ./blog/git_prompt_04/index.md
+[part-01]: @/blog/git_prompt_01/index.md
+[part-02]: @/blog/git_prompt_02/index.md
+[part-03]: @/blog/git_prompt_03/index.md
+[part-04]: @/blog/git_prompt_04/index.md
 [link]: https://github.com/aignas/git-prompt-rs
