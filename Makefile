@@ -1,18 +1,21 @@
+GIT_ROOT ?= $(git rev-parse --git-dir)
+ZOLA = ./zola
+
 init:
 	git config core.hooksPath .githooks
 
 serve:
 	@echo "-- serving with Zola --"
-	zola --config config.dev.toml serve
+	$(ZOLA) --config config.dev.toml serve
 
 build:
 	@echo "-- building with Zola --"
-	zola build ${ARGS}
+	$(ZOLA) build ${ARGS}
 
 check:
 	@echo "-- checking the website with Zola --"
-	zola check ${ARGS}
+	$(ZOLA) check ${ARGS}
 
 clean:
 	@echo "-- cleanup --"
-	rm -rf zola public
+	rm -rf public

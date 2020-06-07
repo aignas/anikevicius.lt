@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+
+case "${1:-}" in
+--about)
+    echo "Check if zola links are good"
+    ;;
+*)
+    command -v zola && zola check
+    ;;
+esac
