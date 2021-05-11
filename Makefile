@@ -2,7 +2,7 @@ GIT_ROOT ?= $(git rev-parse --git-dir)
 ZOLA = zola
 
 init:
-	git config core.hooksPath .githooks
+	git hooks install
 
 serve:
 	@echo "-- serving with Zola --"
