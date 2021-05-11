@@ -1,5 +1,5 @@
 GIT_ROOT ?= $(git rev-parse --git-dir)
-ZOLA = ./zola
+ZOLA = zola
 
 init:
 	git config core.hooksPath .githooks
