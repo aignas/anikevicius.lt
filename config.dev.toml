@@ -1,9 +1,8 @@
 title = "aignas blog"
 base_url = "localhost"
-description = "Personal experiences whilst travelling through the geekdom of tech"
+description = "Public notes"
 compile_sass = true
-check_external_links = true
-generate_rss = true
+generate_feed = true
 taxonomies = [
   {name = "tags"},
   {name = "categories"},

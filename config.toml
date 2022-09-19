@@ -1,15 +1,18 @@
 title = "aignas blog"
 base_url = "https://anikevicius.lt"
-description = "Personal experiences whilst travelling through the geekdom of tech"
+description = "Public notes"
 compile_sass = true
-highlight_code = true
-highlight_theme = "base16-ocean-dark"
-check_external_links = false
-generate_rss = true
+generate_feed = true
 taxonomies = [
   {name = "tags"},
   {name = "categories"},
 ]
+
+[markdown]
+highlight_code = true
+highlight_theme = "monokai"
+render_emoji = true
+smart_punctuation = true
 
 [extra]
 # Put all your custom variables here
