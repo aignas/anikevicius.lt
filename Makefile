@@ -1,5 +1,5 @@
 GIT_ROOT ?= $(git rev-parse --git-dir)
-ZOLA = zola
+ZOLA = docker run -u "$(shell id -u):$(shell id -g)" -v $(PWD):/app --workdir /app ghcr.io/getzola/zola:v0.16.0
 
 init:
 	git hooks install
