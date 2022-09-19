@@ -6,7 +6,13 @@ date = 2022-09-19
 tags = ["wayland", "sway", "i3status", "linux"]
 +++
 
-The font-awesome setting was not working correctly with the previous config when using `i3status-rs`:
+Recently I have been toying around with the `sway` compositor on Wayland in
+order to have a more lightweight setup with better support for keyboard-only
+interaction. However, because I have not used Arch Linux on my desktop for some
+time, I am re-learning a few things as I go as well.
+
+I have followed the documentation on setting up `i3status-rs` on my machine and
+I pasted the initial config for `sway` from the website:
 ```i3
 bar {
     font pango:Hack, FontAwesome 11
@@ -14,18 +20,21 @@ bar {
 }
 ```
 
-It resulted in some weird Kanji being displayed instead of the battery or WiFi icons.
-In order to debug this we can use commands to query the font cache on the system.
-I found this useful piece of info [here](https://github.com/greshake/i3status-rust#integrate-it-into-i3sway).
-It seems that I have not read the manual...
+I realized later, was not working correctly and was showing 漢字 instead of
+font awesome icons. The reason why it took me so long to realize something was
+not working correctly was because I was also setting up correct `locale` setting
+in order to be able to render Japanese fonts correctly.
 
-We can validate the font file which `FontAwesome` matches by using:
+It seems that [the
+author](https://github.com/greshake/i3status-rust#integrate-it-into-i3sway) has
+also specified that it would be good to ensure that `FontAwesome` is pointing
+to the right font on one's system, so let's do that:
 ```
 $ fc-match FontAwesome
 DejaVuSans.ttf: "DejaVu Sans" "Book
 ```
 
-This is not the result I had expected, let's see what `pacman` has installed on my Arch Linux system:
+That's unexpected, let's see what `pacman` has installed on my system:
 ```
 $ pacman -Ql ttf-font-awesome | rg fa-
 ttf-font-awesome /usr/share/fonts/TTF/fa-brands-400.ttf
