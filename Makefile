@@ -1,5 +1,5 @@
 GIT_ROOT ?= $(git rev-parse --git-dir)
-ZOLA = zola
+ZOLA = bin/zola
 
 init:
 	git hooks install
@@ -8,13 +8,16 @@ serve:
 	@echo "-- serving with Zola --"
 	$(ZOLA) --config config.dev.toml serve
 
+help:
+	$(ZOLA) --help
+
 build:
 	@echo "-- building with Zola --"
-	$(ZOLA) build ${ARGS}
+	$(ZOLA) build
 
 check:
 	@echo "-- checking the website with Zola --"
-	$(ZOLA) check ${ARGS}
+	$(ZOLA) check
 
 clean:
 	@echo "-- cleanup --"
