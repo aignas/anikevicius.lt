@@ -2,8 +2,6 @@ title = "aignas blog"
 base_url = "localhost"
 description = "Personal experiences whilst travelling through the geekdom of tech"
 compile_sass = true
-highlight_code = true
-highlight_theme = "monokai"
 check_external_links = true
 generate_rss = true
 taxonomies = [
@@ -11,10 +9,16 @@ taxonomies = [
   {name = "categories"},
 ]
 
+[markdown]
+highlight_code = true
+highlight_theme = "monokai"
+render_emoji = true
+smart_punctuation = true
+
 [extra]
 # Put all your custom variables here
 domain = "localhost"
-copyright = "2017&mdash;2021"
+copyright = "2017&mdash;2023"
 twitter = "anikevicius"
 github = "aignas"
 name = "aignas"

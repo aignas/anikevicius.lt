@@ -11,9 +11,11 @@ order to have a more lightweight setup with better support for keyboard-only
 interaction. However, because I have not used Arch Linux on my desktop for some
 time, I am re-learning a few things as I go as well.
 
+<!-- more -->
+
 I have followed the documentation on setting up `i3status-rs` on my machine and
 I pasted the initial config for `sway` from the website:
-```i3
+```
 bar {
     font pango:Hack, FontAwesome 11
     ...
@@ -29,13 +31,13 @@ It seems that [the
 author](https://github.com/greshake/i3status-rust#integrate-it-into-i3sway) has
 also specified that it would be good to ensure that `FontAwesome` is pointing
 to the right font on one's system, so let's do that:
-```
+```bash
 $ fc-match FontAwesome
 DejaVuSans.ttf: "DejaVu Sans" "Book
 ```
 
 That's unexpected, let's see what `pacman` has installed on my system:
-```
+```bash
 $ pacman -Ql ttf-font-awesome | rg fa-
 ttf-font-awesome /usr/share/fonts/TTF/fa-brands-400.ttf
 ttf-font-awesome /usr/share/fonts/TTF/fa-regular-400.ttf
@@ -53,7 +55,7 @@ fa-solid-900.ttf: "Font Awesome 6 Free" "Solid"
 ```
 
 This means that we should get `sway` working by:
-```i3
+```
 bar {
     font pango:Hack, "Font Awesome 6 Free" 11
     ...
