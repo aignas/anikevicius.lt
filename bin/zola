@@ -5,6 +5,7 @@ main() {
     -u "$(id -u):$(id -g)" \
     -v ${PWD}:/app \
     --workdir /app \
+    --net=host \
     --rm \
     ghcr.io/getzola/zola:v0.16.0 \
     "$@"
