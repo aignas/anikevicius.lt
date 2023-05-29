@@ -1,0 +1,48 @@
+load("@bazel_skylib//rules:diff_test.bzl", "diff_test")
+load("@bazel_skylib//rules:write_file.bzl", "write_file")
+
+_EXTENSION_FILES = [
+    "site-packages/pkg/__init__.py",
+    "site-packages/__init__.py",
+    "site-packages/pkg/my_extension_1/__init__.py",
+]
+
+# check that the extension modules have the same files:
+[
+    diff_test(
+        name = "check_naive_" + f.replace("/", "_"),
+        file1 = "//extension_pkg:" + f,
+        file2 = "//pkg_extension:" + f,
+        failure_message = "run bazel run //:update",
+    )
+    for f in _EXTENSION_FILES
+]
+[
+    diff_test(
+        name = "check_correct_" + f.replace("/", "_"),
+        file1 = "//extension_pkg:" + f,
+        file2 = "//extension_pkg_correct:" + f,
+        failure_message = "run bazel run //:update",
+    )
+    for f in _EXTENSION_FILES[1:]
+]
+
+write_file(
+    name = "gen_update",
+    out = "update.sh",
+    content = [
+        "#!/usr/bin/env bash",
+        "cd $BUILD_WORKSPACE_DIRECTORY",
+    ] + [
+        "cp -fv pkg_extension/{0} extension_pkg/{0}".format(f)
+        for f in _EXTENSION_FILES
+    ] + [
+        "cp -fv pkg_extension/{0} extension_pkg_correct/{0}".format(f)
+        for f in _EXTENSION_FILES[1:]
+    ],
+)
+
+sh_binary(
+    name = "update",
+    srcs = ["update.sh"],
+)

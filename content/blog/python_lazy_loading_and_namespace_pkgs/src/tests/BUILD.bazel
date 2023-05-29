@@ -1,0 +1,90 @@
+load("@rules_python//python:defs.bzl", "py_test")
+
+py_test(
+    name = "test_ok_because_syspath_ordering_due_to_deps_order",
+    srcs = ["test.py"],
+    main = "test.py",
+    deps = [
+        "//pkg:lib",
+        "//pkg_extension:lib",
+    ],
+)
+
+py_test(
+    # NOTE: this is failing because of the ordering of the sys.path
+    name = "test_expected_failure",
+    srcs = ["test.py"],
+    main = "test.py",
+    env = {
+        "EXPECTED_FAILURE_LAZY_LOADED_FUNC": "1",
+        "EXPECTED_FAILURE_REGULAR_FUNC": "1",
+    },
+    deps = [
+        "//extension_pkg:lib",
+        "//pkg:lib",
+    ],
+)
+
+py_test(
+    name = "test_ok_because_syspath_was_sorted_before_importing",
+    srcs = ["test.py"],
+    main = "test.py",
+    env = {"TEST_SORT_SYSPATH": "1"},
+    deps = [
+        "//extension_pkg:lib",
+        "//pkg:lib",
+    ],
+)
+
+py_test(
+    # NOTE: this is failing because of the ordering of the sys.path
+    name = "test_expected_failure_after_sorting",
+    srcs = ["test.py"],
+    main = "test.py",
+    env = {
+        "EXPECTED_FAILURE_LAZY_LOADED_FUNC": "1",
+        "EXPECTED_FAILURE_REGULAR_FUNC": "1",
+        "TEST_SORT_SYSPATH": "1",
+    },
+    deps = [
+        "//pkg:lib",
+        "//pkg_extension:lib",
+    ],
+)
+
+# The following would be reformatted by buildifier and would stop working, so I am
+# not sure how we can get it to work.
+#
+# py_test(
+#     name = "test_would_be_ok_but_need_to_add_buildifier_annotation",
+#     srcs = ["test.py"],
+#     main = "test.py",
+#     deps = [
+#         "//pkg:lib",
+#         "//extension_pkg:lib",
+#     ],
+# )
+
+py_test(
+    name = "test_ok_well_behaved_extension",
+    srcs = ["test.py"],
+    main = "test.py",
+    env = {
+        "EXPECTED_FAILURE_REGULAR_FUNC": "1",
+    },
+    deps = [
+        "//extension_pkg_correct:lib",
+        "//pkg:lib",
+    ],
+)
+
+py_test(
+    name = "test_ok_well_behaved_extension_sorted",
+    srcs = ["test.py"],
+    main = "test.py",
+    env = {"TEST_SORT_SYSPATH": "1"},
+    deps = [
+        "//pkg:lib",
+        "//extension_pkg_correct:lib",
+    ],
+)
