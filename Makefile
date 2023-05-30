@@ -6,22 +6,22 @@ init:
 
 serve:
 	@echo "-- serving with Zola --"
-	$(ZOLA) --config config.dev.toml serve
+	$(ZOLA) -p 1111:1111 -- --config config.dev.toml serve --interface 0.0.0.0
 
 help:
-	$(ZOLA) --help
+	$(ZOLA) -- --help
 
 build:
 	@echo "-- building with Zola --"
-	$(ZOLA) build
+	$(ZOLA) -- build
 
 check:
 	@echo "-- checking the website with Zola --"
-	$(ZOLA) check
+	$(ZOLA) -- check
 
 clean:
 	@echo "-- cleanup --"
-	rm -rf public
+	rm -rf -- public
 
 .PHONY: static
 static: static/assets/webfonts
