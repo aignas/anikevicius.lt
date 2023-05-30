@@ -1,3 +1,12 @@
++++
+title = "Python lazy loading and namespace packages example"
+date = 2023-05-29
+
+[taxonomies]
+tags = ["python", "import", "bazel", "example"]
+categories = ["Python", "Bazel"]
++++
+
 # Namespace packages work correctly
 
 This is a test reproducing the behaviour of Apache airflow packages that
