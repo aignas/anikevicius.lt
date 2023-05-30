@@ -7,7 +7,7 @@ main() {
     --workdir /app \
     --net=host \
     --rm \
-    ghcr.io/getzola/zola:v0.16.0 \
+    ghcr.io/getzola/zola:v0.17.2 \
     "$@"
 }
 
