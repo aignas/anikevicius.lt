@@ -175,13 +175,6 @@ only a single `site-packages` location where you install your packages, which
 is almost always the case for regular Python users or Python installations
 inside containers.
 
-# Appendix
-
-I have created [a bug on bazelbuild/rules_python][rules_python_1242], but after
-writing this prose, I am not sure it is [rules_python] to blame here.
-
 [example]: https://github.com/aignas/anikevicius.lt/tree/master/content/blog/python_lazy_loading_and_namespace_pkgs/src
 [PEP562]: https://peps.python.org/pep-0562/
 [pkgutil.extend_path]: https://docs.python.org/3/library/pkgutil.html#pkgutil.extend_path
-[rules_python_1242]: https://github.com/bazelbuild/rules_python/issues/1242
-[rules_python]: https://github.com/bazelbuild/rules_python/
